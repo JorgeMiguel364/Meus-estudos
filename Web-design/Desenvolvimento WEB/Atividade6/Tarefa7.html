@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+
+<HTML>
+	<HEAD>
+		<meta charset="utf-8"/>
+		<title>Calculator</title>
+		<SCRIPT src="./Tarefa7.js"></SCRIPT>
+	</HEAD>
+
+	<BODY>
+		<!-- Operação de quadrado -->
+		<label>Square this number:
+			<input type="number" id="square-input" size="2">
+		</label>
+		<button id="square-button" onclick="squareNumber()">Calculate</button>
+		<br><br>
+
+
+		<!-- Operação de divisão -->
+		<label>Half this number:
+			<input type="number" id="half-input" size="2">
+		</label>
+		<button id="half-button" onclick="halfNumber()">Calculate</button>
+		<br><br>
+
+
+		<!-- Operação de porcentagem -->
+		<label>Fraction:
+			<input type="number" id="percent1-input" size="2">
+		</label>
+
+		<label>Whole:
+			<input type="number" id="percent2-input" size="2">
+		</label>
+		<button id="percent-button" onclick="percentOf()">Calculate</button>
+		<br><br>
+
+
+		<!-- Operação de área do círculo -->
+		<label>Calculate area of circle with radius:
+			<input type="number" id="area-input" size="2">
+		</label>
+		<button id="area-button" onclick="areaOfCircle()">Calculate</button>
+		<br><br>
+
+
+		<!-- Div principal -->
+		<div id="solution"></div>
+	</BODY>
+	<SCRIPT>
+		var divElement = document.getElementById("solution");
+	</SCRIPT>
+</HTML>

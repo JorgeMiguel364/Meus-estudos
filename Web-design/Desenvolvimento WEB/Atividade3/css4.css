@@ -1,0 +1,36 @@
+h2
+{
+	position: absolute;
+	left: 510px;
+	font-family: arial;
+	bottom: 550px;
+}
+
+h1
+{
+	position: absolute;
+	left: 500px;
+	top: 50px;
+	font-family: arial;
+}
+
+#quadro1
+{
+	position: absolute;
+	font-family: arial;
+	font-size: 20px;
+	left: 510px;
+	bottom: 300px;
+	display: inline-block;
+}
+
+#quadro2
+{
+	display: inline;
+	border-left: 2px solid black;
+	height: 100%;
+	position: absolute;
+	right: 8%;
+	font-family: arial;
+	line-height: 50px;
+}

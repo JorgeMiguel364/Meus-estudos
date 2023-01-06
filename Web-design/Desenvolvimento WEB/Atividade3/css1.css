@@ -1,0 +1,66 @@
+h1
+{
+	background-color:#FFFF00;
+	text-align: center;
+
+}
+
+#title
+{
+	text-align: left;
+	font-weight: bold;
+}
+
+#subtitle
+{
+	text-align: left;
+	font-weight: bold;
+}
+
+#paragraph
+{
+	text-align: left;
+}
+
+#paragraph-contact
+{
+	text-align: center;
+}
+
+#lastPosts
+{
+	text-align: right;
+	border: 2px dotted green;
+	width: 200px;
+	height: 120px;
+	padding: 3px;
+	display: inline-block;
+	position: absolute;
+	right: 10px;
+	line-height: 5px;
+}
+
+#menu
+{
+	text-align: left;
+	display: inline-block;
+	position: absolute;
+	left: 10px;
+	line-height: 5px;
+}
+
+#text
+{
+	//display: inline-block;
+	//text-align: center;
+	position: absolute;
+	left: 250px;
+}
+
+#greenLine
+{
+	border-left: 2px solid green;
+	height: 500px;
+	position: absolute;
+	left: 240px;
+}
