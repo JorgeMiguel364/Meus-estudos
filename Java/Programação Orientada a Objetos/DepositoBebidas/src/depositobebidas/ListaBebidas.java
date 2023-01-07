@@ -1,10 +1,14 @@
 package depositobebidas;
 
+import java.text.DecimalFormat;
+
 public class ListaBebidas
 {
     Bebidas listBebidas[];
     int i, contador;
     boolean itemInexistente;
+    
+    DecimalFormat dec = new DecimalFormat("0.00");
     
     public ListaBebidas(int qtMaxima)
     {
@@ -22,9 +26,39 @@ public class ListaBebidas
         }
     }
     
+    void codigoDuplicado(int beb)
+    {
+        for(i=0; i<contador; i++)
+        {
+            if(listBebidas[i].getCodigoBebidas() == beb)
+            {
+                throw new BebidaDuplicada();
+            }
+        }
+    }
+    
+    void codigoInexistente(int cod)
+    {
+        boolean codigoInexistente = true;
+        
+        for(i=0; i<contador; i++)
+        {
+            if(listBebidas[i].getCodigoBebidas() == cod)
+            {
+                codigoInexistente = false;
+            }
+        }
+        
+        if(codigoInexistente)
+        {
+            throw new CodigoInexistente();
+        }
+    }
+    
     void buscarBebida(int codigoB)
     {
         semItens();
+        codigoInexistente(codigoB);
         
         for(i=0; i<contador; i++)
         {
@@ -32,57 +66,41 @@ public class ListaBebidas
             {
                 System.out.println("\nCódigo: " +listBebidas[i].getCodigoBebidas());
                 System.out.println("Descrição: " +listBebidas[i].getDescricao());
-                System.out.println("Preço: " +listBebidas[i].getPreco());
-                itemInexistente = false;
+                System.out.println("Preço: " +dec.format(listBebidas[i].getPreco()));
             }
-        }
-        
-        if(itemInexistente)
-        {
-            System.out.println("Código " +codigoB+ " inexistente!");
         }
     }
     
     void cadastrarBebida(Bebidas beb)
     {
-        if(buscarBebida(beb.getCodigoBebidas()) == null)
-        {
-            if(contador >= listBebidas.length)
-            {
-                throw new ListaLotada();
-            }
-            else
-            {
-                listBebidas[contador] = beb;
-                System.out.println(listBebidas[contador].getCodigoBebidas() +"cadastrado com sucesso!");
+        codigoDuplicado(beb.getCodigoBebidas());
                 
-                contador++;
-            }
+        if(listBebidas.length <= contador)
+        {
+            throw new ListaLotada();
         }
         else
         {
-            throw new BebidaDuplicada();
+            listBebidas[contador] = beb;
+            System.out.println(beb.getCodigoBebidas()+ " - Bebida cadastrada com sucesso!");
+            contador++;
         }
+
     }
     
-    void atualizarPrecoDescricao(int codBeb, double novoPreco, String novaDescricao)
+    void atualizarPrecoDescricao(int codBeb, String novaDescricao, double novoPreco)
     {
-        if(buscarBebida(codBeb) != null)
+        semItens();
+        codigoInexistente(codBeb);
+        
+        for(i=0; i<contador; i++)
         {
-            throw new CodigoInexistente();
-        }
-        else
-        {
-            for(i=0 ;i<listBebidas.length; i++)
+            if(listBebidas[i].getCodigoBebidas() == codBeb)
             {
-                if(listBebidas[i].getCodigoBebidas() == codBeb)
-                {
-                    listBebidas[i].setDescricao(novaDescricao);
-                    listBebidas[i].setPreco(novoPreco);
-                }
+                listBebidas[i].setDescricao(novaDescricao);
+                listBebidas[i].setPreco(novoPreco);
+                System.out.println("\n" +codBeb+ " - Bebida atualizado com sucesso!");
             }
-            
-            System.out.println(listBebidas[i].getCodigoBebidas() +"atualizado com sucesso!");
         }
     }
 }
