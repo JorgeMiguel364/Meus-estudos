@@ -52,7 +52,7 @@ public class Lista
                 else
                 {
                     lista[i].setQtdEstoque(lista[i].getQtdEstoque() - qtd);
-                    System.out.println(lista[i].getCodigo()+ " - " +lista[i].getQtdEstoque()+ " item(s) zerado(s)!");
+                    System.out.println(lista[i].getCodigo()+ " - " +qtd+ " item(s) zerado(s)!");
                 }
                 
                 return;
@@ -69,7 +69,7 @@ public class Lista
             if(lista[i].getCodigo() == codigo)
             {
                 lista[i].setQtdEstoque(lista[i].getQtdEstoque() + qtd);
-                System.out.println(lista[i].getCodigo()+ " - " +lista[i].getQtdEstoque()+ " item(s) acrescentado(s)!");
+                System.out.println(lista[i].getCodigo()+ " - " +qtd+ " item(s) acrescentado(s)!");
                 return;
             }
         }
@@ -88,6 +88,7 @@ public class Lista
                 System.out.println("Descrição: " +lista[i].getDescricao());
                 System.out.println("Preço: " +dec.format(lista[i].getPreco()));
                 System.out.println("Quantidade em estoque: " +lista[i].getQtdEstoque());
+                System.out.println();
                 
                 return;
             }
