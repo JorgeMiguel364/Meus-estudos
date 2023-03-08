@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+
+<HTML>
+	<HEAD>
+		<meta charset="utf-8"/>
+		<title>A Internet!</title>
+		
+		<style>
+		
+			body
+			{
+				font-family: Arial;
+				word-wrap: break-word;
+			}
+			
+			footer
+			{
+				background-color: #20b2aa;
+				border-top: 2px solid #1a8e88;
+				color: #ffffe0;
+				text-align: center;
+				font-style: italic;
+				line-height: 4px;
+				margin-top: 200px;
+			}
+			
+			p
+			{
+				font-size: 16px;
+			}
+		
+			#header
+			{
+				background-color: #20b2aa;
+				color: #ffffe0;
+				padding: 5px;
+				text-align: center;
+				border-top: 2px solid #1a8e88;
+				border-bottom: 2px solid #1a8e88;				
+			}
+			
+			#menu
+			{
+				background-color: #E9F3FF;
+				margin: 60px 0 20px;
+				height: 150px;
+				text-align: center;
+				padding-top: 90px;
+			}
+						
+			#historia, #funcionamento
+			{
+				background-color: #E9F3FF;
+				min-height: 420px;
+				padding: 20px 80px;
+				margin: 30px auto;
+				width: 60%;
+				font-size: 20px;
+				text-align: left;
+			}
+			
+			#introdução
+			{
+				background-color: #E9F3FF;
+				min-height: 420px;
+				padding: 20px 80px;
+				margin: 30px auto;
+				width: 60%;
+				font-size: 20px;
+				text-align: left;
+			}
+						
+			.internet-icons
+			{
+				width: 60px;
+				padding: 30px 60px;
+			}
+			
+			#icons
+			{
+				display: block;
+				margin: auto;
+				height: 150px;
+			}
+						
+			#icon1
+			{
+				float: left;
+				height: 150px;
+				width: 33%;				
+			}
+			
+			#icon2
+			{
+				float: left;
+				height: 150px;
+				width: 22%;
+			}
+			
+			#icon3
+			{
+				float: right;
+				height: 150px;
+				width: 33%;				
+			}
+			
+			h1, h2, h3
+			{
+				text-align: center;
+			}
+			
+			ul
+			{
+				font-size: 16px;
+			}
+			
+			#internet-surfing
+			{
+				width: 250px;
+				float: left;
+				margin-right: 20px;
+			}
+			
+			#world-wide-web
+			{
+				width: 450px;
+				float: left;
+				margin-right: 20px;
+			}
+			
+			#Internet-Service-Provider
+			{
+				width: 350px;
+				float: left;
+				margin-right: 20px;
+			}
+			
+			#endereco-ip
+			{
+				width: 320px;
+				float: left;
+				margin-right: 20px;
+			}
+			
+			#tracert
+			{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 750px;
+			}			
+			
+			#cs
+			{
+				width: 320px;
+				float: left;
+				margin-right: 20px;
+			}
+
+			
+			#comutação-pc
+			{
+				width: 400px;
+				float: left;
+				margin-right: 20px;
+			}
+			
+			#arpanet
+			{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 250px;
+			}
+			
+			#arpanet-map
+			{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 400px;
+			}
+			
+			#berners-lee
+			{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 350px;
+			}
+			
+			#web-develop
+			{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 200px;
+			}
+			
+			#mail
+			{
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+				width: 50px;
+			}			
+			
+			.main-img
+			{
+				border: 3px solid #d2dbe6;
+			}
+			
+			.line
+			{
+				border-bottom: 3px solid #f0f7ff;
+			}
+			
+			.internal-line
+			{
+				border-bottom: 3px solid #d8dee6;
+			}
+			
+			a:link
+			{
+				color: #000;
+				text-decoration: none;
+			}
+			
+			a:hover
+			{
+				text-decoration: underline;
+			}
+			
+			a:visited
+			{
+				color: #2a2c2e;
+			}
+						
+			.lista-elementos
+			{
+				background-color: #d2dbe6;
+				width: 500px;
+				height: 25px;
+				margin-bottom: 2px;
+				border-radius: 3px;
+				transition: .4s;
+			}
+			
+			.lista-elementos:hover
+			{
+				background-color: #a8afb8;
+				text-decoration: none;
+				font-style: italic;
+			}
+			
+			.lista-elementos:visited
+			{
+				text-decoration: none;
+			}
+			
+			#button-bottom
+			{
+				background-color: #d2dbe6;
+				width: 160px;
+				height: 30px;
+				border-radius: 5px;
+				display: inline-block;
+				margin-top: 20px;
+				margin-left: 45%;
+				padding-top: 10px;
+				transition: .4s;
+				text-align: center;
+			}
+			
+			#button-bottom:hover
+			{
+				background-color: #a8afb8;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			
+			.main-button
+			{
+				background-color: #d2dbe6;
+				width: 240px;
+				height: 40px;
+				border-radius: 5px;
+				display: inline-block;
+				margin: 0 10px;
+				padding-top: 25px;
+				transition: .4s;
+			}
+			
+			.main-button:hover
+			{
+				background-color: #a8afb8;
+				text-decoration: none;
+				font-weight: bold;
+			}
+			
+			figure
+			{
+				text-align: center;
+				font-size: 14px;
+				font-style: italic;
+			}
+															
+		</style>
+	</HEAD>
+	
+	<BODY>
+		<a name="internet"></a>
+	
+		<!-- Cabeçalho -->
+		<header>
+		
+			<div id="icons">
+				<div id="icon1">
+					<img style="float: left;" class="internet-icons" src="img/icon-ethernet1.png" alt="ethernet1">
+				</div>
+				
+				<div id="icon2">
+					<img style="float: right;" class="internet-icons" src="img/icon-web.png" alt="web">
+				</div>
+				
+				<div id="icon3">
+					<img style="float: right;" class="internet-icons" src="img/icon-ethernet2.png" alt="ethernet2">					
+				</div>
+			</div>
+			
+			<div id="header">
+				<h1>A Internet</h1>
+			</div>
+			
+			<div id="menu">
+				<a href="#inicio" class="main-button">Introdução</a>
+				<a href="#surgimento" class="main-button">História</a>
+				<a href="#estrutura" class="main-button">Funcionamento</a>
+				<a href="#fim" class="main-button">Rodapé</a>
+			</div>
+			
+		</header>
+		
+		<!-- Principal -->
+		<br><br><br>
+		
+		<div class="line"></div>
+		<main>
+		
+			<a name="inicio"></a>
+			<div id="introdução">
+				<h2>Introdução</h2>
+				
+				<img class="main-img" id="internet-surfing" src="img/Internet-surfing.jpeg" alt="Internet surfing">
+				
+				<p>A Internet, um serviço tão comum e indispensável hoje em dia.</p>
+				<p>Ela está presente praticamente em todos os lugares: nas empresas, nas lojas, nas casas, no sinal wifi da praça, nos ônibus e metrôs. E todos a usam: estudantes, professores, advogados, desempregados, crianças, médicos...</p>
+				<p>Mas uma grande parte desses mesmos usuários não sabem qual a origem da Internet, e muito menos entendem seu funcionamento e estrutura.</p>
+				<p>O utilizador que compreende o mecanismo por trás de um serviço que consome, consequentemente faz um melhor uso do mesmo, além de não desperdiçar os olhos da cara com técnicos e profissionais quando alguma pane surge em sua rede.</p>
+				<p>Uma ferramenta que possibilitou a união das pessoas ao redor do globo em uma escala gigantesca nunca vista antes. Independente de raça, nacionalidade, credo, ideologia, idioma... todos a usam: <b>A Internet</b></p>
+			</div>
+			
+			<div class="line"></div>
+		
+			<a name="surgimento"></a>
+			<div id="historia">
+				<h2>História</h2>
+				
+				<p>Para melhor explicar a história da Internet, começamos por um tópico a parte: <b>A Guerra Fria</b></p>
+				<p>A Guerra Fria foi uma disputa entre duas potências mundiais, são eles: Estados Unidos (bloco capitalista) e União Soviética (bloco socialista). Essa guerra não declarada durou desde os anos 1946 até 1991, com a queda da União Soviética.</p>
+				<p>Em meio a tensão militar, as duas potências temiam ocorrer um ataque em seus territórios, fato esse que impulsionou o governo americano a dar vida a primeira versão do que seria a Internet.</p>
+				<p>Em 1969, a <b>ARPA (Advanced Research Projects Agency)</b> criou a <b>ARPANET (Advanced Research Projects Agency Network)</b> e é exatamente esse projeto que nos anos futuros se tornaria a Internet que conhecemos.</p>
+				
+				<img src="img/Arpanet.jpg" class="main-img" id="arpanet">
+				
+				<p>A estrutura básica da Arpanet (ou Internet) gira em torno de um mecanismo simples e dinâmico: Seu funcionamento é composto por 2 ou mais computadores interligados entre si, que trocam dados e informações em conjunto, proporcionando rapidez e robusticidade no envio e recebimento de informações sigilosas.</p>
+				<p>Se um computador pertencente a rede fosse destruído ou comprometido pelos soviéticos, a rede como um todo e a troca de informações não seriam afetadas, preservando sua operação e ajudando nas estratégias militares.</p>
+				
+				<figure>
+					<img src="img/Internet-map.jpg" id="arpanet-map" class="main-img">
+					<figcaption>Arpanet em 1969. De início, somente universidades e unidades militares tinham acesso a tecnologia</figcaption>
+				</figure>
+				
+				<p>Desde 1969 até final dos anos 1980, a Internet era usado apenas por indivíduos acadêmicos e militares, sem contar o fato de que seu uso era difícil e um tanto quanto trabalhoso para um usuário comum.</p>
+				<p>Mas outra revira volta está prestes a acontecer quando o físico britânico Tim Berners-Lee criou a World Wide Web em 1991, aplicando os conceitos de cliente-servidor e a comunicação por hipertexto por meio de navegadores.</p>
+				<p>Com seu fácil uso proporcionado pela WWW, aliado ao fato das empresas começarem a explorar comercialmente esse serviço, a quantidade de usuários só aumentou de forma geométrica desde então.</p>
+				<p>Então a partir dos anos 2000 uma nova revolução irá surgir com a explosão de serviços e dos mais variados sites na rede mundial. Serviços como Facebook, Orkut, Twitter e Instagram vieram dessa explosão tecnológica, literalmente qualquer um, em qualquer lugar, apenas munido de um computador ou outro dispositivo conectado a Internet, tem o mundo todo na palma das suas mãos.</p>
+				<p>Uma tecnologia arcaica apenas para fins militares criada em 1969 foi o responsável por uma das maiores revoluções da humanidade. Há quem diga que estamos passando pela quarta revolução industrial. Tudo isso graças a: <b>Internet.</b></p>
+				
+				<figure>
+					<img src="img/Berners-Lee.jpg" class="main-img" id="berners-lee">
+					<figcaption>Tim Berners-Lee, o criador da World Wide Web</figcaption>
+				</figure>
+				
+			</div>
+			
+			<div class="line"></div>
+			
+			<a name="estrutura"></a>
+			<div id="funcionamento">
+				<h2>Funcionamento</h2>
+				
+				<p>Resumindo em poucas palavras: a Internet nada mais é do que vários computadores interligados formando uma rede, que trocam dados e informações entre si.</p>
+				
+				<p>O funcionamento da Internet depende de vários elementos trabalhando em conjunto, na qual cada elemento tem uma tarefa específica. Esses elementos cruciais são:</p>
+				<ul>
+					<li class="lista-elementos"><a href="#protocolos">Protocolos</a></li>
+					<li class="lista-elementos"><a href="#comutação-pacotes">Comutação de Pacotes</a></li>
+					<li class="lista-elementos"><a href="#cliente-servidor">Cliente-servidor</a></li>
+					<li class="lista-elementos"><a href="#roteadores">Roteadores</a></li>
+					<li class="lista-elementos"><a href="#www">Rede Mundial de Computadores (World Wide Web)</a></li>
+					<li class="lista-elementos"><a href="#ISP">ISP (Internet Service Provider - Provedor de Acesso a Internet)</a></li>
+				</ul>
+				
+				<br>
+				
+				<a name="protocolos"></a>
+				<h3>Protocolos</h3>
+				
+				<img class="main-img" id="endereco-ip" src="img/endereco-ip.png" alt="Protocolo">
+				
+				<p>De forma resumida, protocolos são regras e métodos sobre como os computadores se comunicam.</p>
+				<p>Pense em um idioma, para haver comunicação entre 2 ou mais pessoas é necessário que o idioma que eles falam seja o mesmo. A mesma lógica se aplica aos protocolos de Internet, uma vez que para haver uma troca de dados robusta e confiável é necessário que os dois hosts "falem" o mesmo idioma.</p>
+				<p>Existem centenas de protocolos das mais variadas funções e utilidades, mas vamos citar as 3 mais importantes: IP, TCP e HTTP.</p>
+				
+				<p><b>IP: </b>IP é uma abreviação de Internet Protocol. Isso é basicamente um endereço numérico associado a um computador conectado a Internet e tal endereço é único na rede toda.</p>
+				<p>Um endereço IP é composto por 4 blocos numéricos chamados octetos, sendo que cada octeto pode assumir um valor entre 0 e 255. Um endereço típico seria: <i>78.167.92.206</i> ou <i>142.74.95.57.</i></p>
+				<p>Vamos a um exemplo prático:</p>
+				<p><script language="JavaScript" type="text/javascript" src="http://meuip.eu/ip.php"></script></p>
+				
+				<div class="internal-line"></div>
+				
+				<p><b>TCP: </b>TCP é uma abreviação de Transfer Control Protocol. Esse protocolo é responsável por dividir uma informação inteira em pedaços menores chamados de pacotes, e enviá-los a seu destino.</p>
+				<p>Outra função bastante importante desse elemento é que ele usa de mecanismos para assegurar que os pacotes enviados cheguem ao destino de forma íntegra; caso algum pacote se corrompa ou haja perda de pacotes, esse protocolo reenvia o pacote comprometido em questão, garantindo assim a confiabilidade no envio de informações.</p>
+				<p>O mesmo também gerencia e organiza a conexão entre duas máquinas (ex: cliente-servidor).</p>
+				
+				<div class="internal-line"></div>
+
+				<p><b>HTTP: </b>HTTP é uma abreviação de HyperText Transfer Control e sua função é de fazer o download da página web para o seu navegador com base na URL que o usuário digitou na barra de pesquisas do mesmo.</p>
+				<p>Seu funcionamento segue a mesma estrutura do TCP, exceto pelo fato dele ser específico para páginas web. Quando o usuário entra com a URL na barra de pesquisas, o HTTP inicia a troca de dados entre seu computador e o servidor onde o serviço web está hospedado. Nessa troca de informações é feito o download da página web em questão, o navegador por sua vez interpreta essas informações recebidas e o renderiza como um site.</p>
+				
+				<br>
+				
+				<a name="comutação-pacotes"></a>
+				<h3>Comutação de pacotes</h3>
+				
+				<img class="main-img" id="comutação-pc" src="img/comutação-pacotes.jfif" alt="Comutação de pacotes">
+				
+				<p>Comutação de pacotes é o ingrediente especial que fez da Internet algo diferente. Nesse modelo as informações que trafegam de um dispositivo a outro são divididos em pacotes menores, ainda no dispositivo de origem. Cada pacote contém o endereço IP de origem e o endereço IP de destino.</p>
+				<p>Esses pacotes endereçados por sua vez podem seguir por diferentes caminhos para chegar ao destino. Uma vez no destino os pacotes estão desorganizados e fora de ordem, o receptor então por meio do protocolo TCP organiza e reúne todos esses pacotes recebidos e os reconstrói como uma informação sólida e íntegra.</p>
+				<p>Esse modelo opera de forma oposta a seu avô, a comutação de circuitos - esse modelo arcaico é utilizado em ligações telefônicas e as informações trafegam de forma contínua e por um caminho único, sendo suscetível a falhas e problemas na linha.</p>
+				<p>Foi a tecnologia de comutação de pacotes que tornava a então Arpanet indestrutível e robusta!</p>
+				
+				<br>
+				
+				<a name="cliente-servidor"></a>
+				<h3>Cliente - Servidor</h3>
+				
+				<img class="main-img" id="cs" src="img/cliente-servidor.png" alt="Cliente-Servidor">
+				
+				<p>O modelo cliente-servidor é uma estrutura que define quais hosts são aqueles que oferecem um serviço (servidor) e quais hosts são aqueles que irão usufruir dos serviços disponibilizados pelo servidor (cliente).</p>
+				<p>Servidor: é um computador central (ou por vezes um software) que oferece um serviço em meio a uma rede.</p>
+				<p>Cliente: um computador que não oferece serviço algum, e apenas usufrui dos serviços disponibilizados pelo servidor central.</p>
+				<p>São vários os exemplos de modelo cliente-servidor, mas os mais conhecidos são: servidores DNS, servidores de email, servidores de arquivos e servidores de jogos online - todos esses serviços são usufruidos por um cliente nas redondezas.</p>
+				
+				<br>
+				
+				<a name="roteadores"></a>
+				<h3>Roteadores</h3>
+				
+				<p>Roteador nada mais é do que um dispositivo que faz uma ponte entre as inúmeras redes existentes na Internet como um todo.</p>
+				<p>Como citado anteriormente, a Internet nada mais é do que vários computadores trocando informações entre si; todo computador por sua vez pertence a pelo menos uma rede local (LAN) e os roteadores fazem a união entre as diferentes redes (LAN) formando então a WAN (Wide Area Network - Internet mundial).</p>
+				<p>Os pacotes que trafegam pela rede na verdade vão "saltando" entre os diferentes roteadores em meio ao caminho até chegar a seu destino final. O roteador por sua vez define qual o próximo roteador que o pacote deve atingir afim de chegar a seu alvo; o mesmo também possui uma lista de roteamento com informações sobre o nível de congestionamento de uma determinada linha ou qual o caminho mais fácil e curto para se atingir o destino final.</p>
+				
+				<figure>
+					<img class="main-img" id="tracert" src="img/tracert.jpg" alt="roteadores">
+					<figcaption>Lista de roteadores percorridos até chegar nos servidores da Google, usando o comando tracert</figcaption>
+				</figure>
+				
+				<br>
+				
+				<a name="www"></a>
+				<h3>Rede Mundial de Computadores (World Wide Web)</h3>
+				
+				<img class="main-img" id="world-wide-web" src="img/WorldWideWeb.jpg" alt="Internet mundial">
+				
+				<p>Com os principais tópicos sobre o funcionamento da Internet já abordados anteriormente, já é possível se ter um entendimento sobre a World Wide Web (Rede Mundial de Computadores).</p>
+				<p>World Wide Web, ou WWW, foi o que popularizou a Internet e fez com que o mesmo se tornasse a febre que é nos dias atuais. Antes da sua criação em 1991, a Internet era de difícil acesso e de uso restrito a técnicos de TI.</p>
+				<p>Seu modelo se baseia em páginas estruturadas em hipertextos, isso é, são páginas que contém imagens, vídeos, sons, textos e diversas aplicações acessíveis por meio de um link. Uma página pode conter infinitos links para as mais infinitas páginas dos mais diferentes tipos. Tal infinidade de páginas e informações levou a criação de motores de buscas, como Google ou Yahoo.</p>
+				<p>Basicamente, o navegador faz o download da página web contactando o servidor na qual o site está hospedado, uma vez finalizado o download, o navegador interpreta as linguagens de marcação/programação contidas no arquivo (HTML, CSS, Javascript), e renderiza o conteúdo na forma de uma página interativa.</p>
+				
+				<br>
+				
+				<a name="ISP"></a>
+				<h3>ISP (Internet Service Provider)</h3>
+				
+				<img class="main-img" id="Internet-Service-Provider" src="img/Internet-Service-Provider.jpg" alt="ISP">
+				
+				<p>ISP (Internet Service Provider ou Provedor de Acesso a Internet) são as empresas e corporações que oferecem acesso a Internet ao usuário final, permitindo sua inserção na rede mundial de computadores.</p>
+				<p>É cobrada uma taxa mensal ao usuário final em troca de acesso ilimitado (ou limitado) a Internet. O que é conhecido como velocidade da Internet na verdade é a largura de banda ou banda larga. Quanto maior for a banda larga, mais veloz será a Internet. Se a infraestrutura da Internet de uma determinada região for boa, ou a infraestrutura de uma ISP também for boa, consequentemente a velocidade de banda também será maior ao usuário final ou consumidor.</p>
+				<p>Uma ISP de maneira geral é uma rede com todos seus assinantes ali reunidos. Um ISP se conecta com outras IPSs por meio de roteadores, que por sua vez se conectam com outras ISPs ainda mais gigantescas e robustas, até atingir níveis grandes dessa hierarquia global.</p>
+				
+			</div>
+			
+			<div class="line"></div>
+			
+			<a href="#internet" id="button-bottom">Início</a>
+		
+		</main>
+		
+		<!-- Rodapé -->
+		<footer>
+			<a name="fim"></a>
+			<br><br>
+			
+			<img id="web-develop" src="img/web-development.png" alt="Web development">
+			<br><br>
+			
+			<p>Página escrita por:</p>
+			<p>Jorge Miguel</p>
+			<br><br><br>
+			
+			<img id="mail" src="img/Mail-logo.jpg" alt="Mail">
+			<p>jorgemiguel364@gmail.com</p>
+			<br><br><br>
+			
+			<p>Todo o conteúdo aqui escrito é resultado de meus estudos</p>
+			<p>e dedicação na área de TI.</p>
+			<br><br><br><br>
+		</footer>
+		
+		
+	</BODY>
+	
+</HTML>
