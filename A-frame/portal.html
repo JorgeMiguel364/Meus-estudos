@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<HTML lang="pt-br">
+
+	<HEAD>
+		<meta charset = "utf-8" />
+		<meta name = "viewport" content = "width-device-width, initial-scale-1" />
+		<title>Portal</title>
+		<script src = "https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+	</HEAD>
+	
+	<BODY>
+	
+		<a-scene background="color: #E6EDF3">
+		
+			<!-- Posição da câmera -->
+			<a-camera position="3 0 5"></a-camera>
+		
+			<!-- Portal -->
+			<a-box scale = ".2 5 .2" position="0 .6 -6" rotation="0 0 0" color="#55555c"></a-box>
+			<a-box scale = ".2 5 .2" position="6 .6 -6" rotation="0 0 0" color="#55555c"></a-box>
+			<a-box scale = "6.2 .2 .2" position="3 -2 -6" rotation="0 0 0" color="#55555c"></a-box>
+			<a-box scale = "6.2 .2 .2" position="3 3 -6" rotation="0 0 0" color="#55555c"></a-box>
+			
+			<!-- Siga a seta-->
+			<a-entity position="3 4 -6">
+				<a-box scale = ".15 .5 .02" position="0 0 0" rotation="0 0 0" color="#E63F3F"></a-box>
+				<a-cone scale = ".3 .4 .02" position="0 -.4 0" rotation="0 0 180" color="#E63F3F"></a-cone>
+			</a-entity>
+			
+			<!-- Fundo roxo -->
+			<a-box scale = "6 5 .03" position="3 .5 -6" rotation="0 0 0" color="#B915A0" material="opacity: .3"></a-box>
+			
+			<!-- Base do portal -->
+			<a-box scale = "7 .2 5" position="3 -2.2 -6" rotation="0 0 0" color="#88888d"></a-box>
+			
+			<!-- Nomes dos integrantes -->
+			<a-text value="Joao Ulisses" color="#333" position="7.5 2.6 -6" scale="1 1 1"></a-text>
+			<a-text value="Jorge Miguel" color="#333" position="7.5 2.3 -6" scale="1 1 1"></a-text>
+			<a-text value="Maria Eduarda" color="#333" position="7.5 2 -6" scale="1 1 1"></a-text>
+			<a-text value="Pedro Theobaldo" color="#333" position="7.5 1.7 -6" scale="1 1 1"></a-text>
+			<a-text value="Vinicius de Lima" color="#333" position="7.5 1.4 -6" scale="1 1 1"></a-text>
+		
+		</a-scene>
+	
+	</BODY>
+</HTML>
